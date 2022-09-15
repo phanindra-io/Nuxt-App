@@ -7,22 +7,12 @@ export const state = () => ({
       "model#": "abc-xyz-200",
       "name":"test name",
       "brand": "lg",
-      "features": [
-        {
-          "freezor": {
-            "temp": {
-              "min": -15,
-              "max": -4
-            }
-          },
-          "ice_maker": {
-            "capacity": {
-              "cubes": "2kgs",
-              "curshed": "1kg"
-            }
-          }
-        }
-      ]
+      "freezor_temp": {
+        "min": -15,
+        "max": -4,
+      },
+      "ice_maker_capacity_cubes": "2kgs",
+      "ice_maker_capacity_crushed": "1kg",
     },
     {
       "id": 2,
@@ -45,53 +35,28 @@ export const state = () => ({
       "model#": "abc-xyz-100",
       "name":"test name",
       "brand": "lg",
-      "features": [
-        {
-          "freezor": {
-            "temp": {
-              "min": -15,
-              "max": -4
-            }
-          },
-          "ice_maker": {
-            "capacity": {
-              "cubes": "2kgs",
-              "curshed": "1kg"
-            }
-          }
-        }
-      ]
+      "freezor_temp": {
+        "min": -15,
+        "max": -4,
+      },
+      "ice_maker_capacity_cubes": "2kgs",
+      "ice_maker_capacity_crushed": "1kg",
+      "water_dispensor_hotwater_temp": 100,
+      "water_dispensor_present": true,
+
     },
     {
       "id": 4,
       "kitchen": "garage",
       "model#": "sssm-xyz-200",
       "brand": "Samsung",
-      "features": [
-        {
-          "freezor": {
-            "temp_range": {
-              "min": -10,
-              "max": -5
-            }
-          },
-          "water_dispensor": {
-            "present": true,
-            "type": [
-              {
-                "hotwater": {
-                  "temp": 100
-                }
-              },
-              {
-                "cold": {
-                  "temp": 4
-                }
-              }
-            ]
-          }
-        }
-      ]
+      "freezor_temp": {
+        "min": -10,
+        "max": -5,
+      },
+      "water_dispensor_present": true,
+      "water_dispensor_hotwater_temp": 100,
+      "water_dispensor_cold_temp": 4
     }
   ]
 })
