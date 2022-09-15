@@ -9,3 +9,9 @@ Overview
 7. ConfigureElements will fetch the appliance data using the prop "id" from the Vuex store.
 8. A user can edit the information displayed in the ConfigureElements component and on save will popup an alert box displaying the edited information.
 9. Cleaned up the data provided in the json files and defined it in the Vuex store.
+10. According to the data type, different input fields will be displayed as mentioned in the requirements.
+
+Instruction to Start
+
+npm install
+npm run dev
