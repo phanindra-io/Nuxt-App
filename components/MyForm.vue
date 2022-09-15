@@ -40,21 +40,26 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'MyForm',
   data() {
     return {
-      menuItems: [
-        { text: 'fridge lg', value: 'fridge lg.json' },
-        { text: 'fridge samsung 100', value: 'fridge samsung 100.json' },
-        { text: 'fridge samsung 200', value: 'fridge samsung 200.json' },
-        { text: 'washer samsung', value: 'washer samsung.json' },
-      ]
+      selectedItem: null,
     }
+  },
+  computed: {
+    ...mapGetters({
+      appliances: 'general/getAppliances'
+    }),
+    menuItems() {
+      return this.appliances.map(el => { return { id: el.id, text: `${el.brand} ${el["model#"]}` } })
+    },
   },
   methods: {
     load() {
-      alert()
+      this.$emit('configure', this.selectedItem.id)
     }
   }
 }
